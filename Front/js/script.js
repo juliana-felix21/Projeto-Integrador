@@ -261,14 +261,15 @@ function personalizeContent(profile) {
         }
     });
 }
-
+//setupTools()  centraliza toda a configuração das ferramentas interativas
 function setupTools() {
     // Configurar eventos para as ferramentas
     document.getElementById('compound-interest').addEventListener('click', () => {
-        alert('Simulador de Juros Compostos será aberto');
-        // Implementar lógica da ferramenta
+        console.log('Redirecionando para a Calculadora do Cidadão...');
+        window.open('https://www3.bcb.gov.br/CALCIDADAO/jsp/index.jsp', '_blank');
     });
-    
+}
+
     document.getElementById('investment-simulator').addEventListener('click', () => {
         alert('Simulador de Investimentos será aberto');
         // Implementar lógica da ferramenta
@@ -278,7 +279,7 @@ function setupTools() {
         alert('Construtor de Carteira será aberto');
         // Implementar lógica da ferramenta
     });
-}
+
 // ===== FUNÇÕES DO ORÇAMENTO =====
 function setupBudgetTool() {
     // Adicione aqui todo o código JavaScript 
@@ -295,3 +296,15 @@ function formatReference() {
     
     return `${ref} ${link} ${date}`;
 }
+// Formulário de Contato 
+document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Simulação de envio (substitua por integração real com backend)
+    const formData = new FormData(this);
+    const dados = Object.fromEntries(formData.entries());
+    
+    console.log('Mensagem enviada:', dados); // Para debug
+    alert('Mensagem enviada com sucesso! Responderemos em até 48h.');
+    this.reset();
+});
