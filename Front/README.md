@@ -1,6 +1,6 @@
-# FinEdu - Plataforma de Educação Financeira
+# Learn Finance - Plataforma de Educação Financeira
 
-![Banner FinEdu](https://via.placeholder.com/1200x400?text=FinEdu+Banner) <!-- Substitua por uma imagem real -->
+![Banner Learn Finance](https://) <!-- Substitua por uma imagem real -->
 
 Plataforma web para educação financeira e identificação de perfil de investidor com recomendações personalizadas.
 
