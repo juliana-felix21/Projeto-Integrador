@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Finance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        /* Espaçamento personalizado */
+        .content-container p {
+            margin-bottom: 1.5em; /* Usa unidades relativas */
+            line-height: 1.6;
+        }
+        
+        /* Espaço extra entre seções */
+        .theory-section {
+            margin-bottom: 3rem;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><i class="fas fa-chart-line"></i> Learn Finance</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#jornada">Jornada</a></li>
+            <li><a href="index.html#perfil">Meu Perfil</a></li>
+            <li><a href="index.html#ferramentas">Ferramentas</a></li>
+            <li><a href="index.html#sobre">Sobre</a></li>
+            <li class="auth-buttons">
+                <button id="btn-login">Login</button>
+                <button id="btn-register">Cadastre-se</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="content-container">
+        <section class="theory-section">
+            <h2><i class="fas fa-wallet"></i> Risco, retorno e diversificação</h2>
+            
+            <p></p>
+           
+
+        
+        <script>
+            // Atualiza a data automaticamente
+            document.getElementById('current-date').textContent = new Date().toLocaleDateString('pt-BR');
+        </script>
+        
+    </main>
+
+    <!-- Rodapé -->
+    <<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Learn Finance</h4>
+            <p>Sua plataforma completa de educação financeira</p>
+        </div>
+        <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <ul>
+                <li><a href="#jornada">Cursos</a></li>
+                <li><a href="#perfil">Perfil de Investidor</a></li>
+                <li><a href="#ferramentas">Ferramentas</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Fale Conosco</h4>
+            <form id="contact-form" class="contact-form">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+                <button type="submit" class="cta-button">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Learn Finance. Todos os direitos reservados.</p>
+    </div>
+</footer>
+<!-- Modais -->
+<div id="login-modal" class="modal hidden">
+    <!-- Conteúdo do modal de login -->
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
