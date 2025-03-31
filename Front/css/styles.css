@@ -149,13 +149,13 @@ section {
     padding: 4rem 10%;
 }
 
-.education-section h2, .quiz-section h2, .tools-section h2 {
+.jornada-section h2, .quiz-section h2, .tools-section h2 {
     text-align: center;
     margin-bottom: 3rem;
     color: var(--primary-color);
 }
 
-.education-section h2 i, .quiz-section h2 i, .tools-section h2 i {
+.jornada-section h2 i, .quiz-section h2 i, .tools-section h2 i {
     margin-right: 0.5rem;
     color: var(--secondary-color);
 }
@@ -479,4 +479,14 @@ footer {
 
 .contact-form button:hover {
     background: var(--secondary-color);
+}
+
+
+.jornada-section a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Mantém a cor do texto padrão da página */
+}
+
+.jornada-section a:hover {
+    text-decoration: underline; /* Opcional: sublinha ao passar o mouse */
 }
