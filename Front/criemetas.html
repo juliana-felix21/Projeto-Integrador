@@ -3,23 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn Finance</title>
+    <title>Crie Metas</title>
+    <meta name="description" content="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    
     <style>
-        /* Espaçamento personalizado */
-        .content-container p {
-            margin-bottom: 1.5em; /* Usa unidades relativas */
-            line-height: 1.6;
+
+               /* Estilos específicos para esta página */
+        .investment-hero {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 10px;
         }
         
-        /* Espaço extra entre seções */
-        .theory-section {
-            margin-bottom: 3rem;
+        .investment-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .investment-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .investment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: var(--secondary-color);
+        }
+        
+        .investment-card h4 i {
+            margin-right: 0.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .investment-tip {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--warning-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .investment-tip i {
+            color: var(--warning-color);
+            margin-right: 0.5rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
         }
     </style>
-
 </head>
 <body>
     <!-- Barra de Navegação -->
@@ -30,6 +89,7 @@
         <ul class="nav-links">
             <li><a href="index.html#jornada">Jornada</a></li>
             <li><a href="index.html#perfil">Meu Perfil</a></li>
+            <li><a href="tiposinvestimentos.html">Tipos de Investimentos</a></li>
             <li><a href="index.html#ferramentas">Ferramentas</a></li>
             <li><a href="index.html#sobre">Sobre</a></li>
             <li class="auth-buttons">
@@ -41,54 +101,326 @@
 
     <!-- Conteúdo Principal -->
     <main class="content-container">
-        <section class="theory-section">
-            <h2><i class="fas fa-wallet"></i> Crie suas metas</h2>
-            
-            <p></p>
-           
+        <!-- Seção Hero -->
+        <section class="investment-hero">
+            <h1><i class="fas fa-piggy-bank"></i> Metas de Investimentos </h1>
+            <p>Criar metas de investimento claras é fundamental para seu sucesso financeiro</p>
+        </section>
 
+        <!-- Conteúdo das Metas -->
+        <section class="theory-section">
+            <h2><i class="fas fa-coins"></i> Por onde começar?</h2>
+            <p></p>
+            <br>
+            
+            <h3><i class=""></i> 1. Entenda Seu Ponto de Partida</h3>
+            <p></p>
+            
+            <h4>Faça um diagnóstico financeiro completo:</h4>
+            <ul class="checklist">
+                <li>Liste todos os seus ativos (poupança, investimentos, imóveis)</li>
+                <li>Anote suas dívidas e obrigações financeiras</li>
+                <li>Calcule seu patrimônio líquido (ativos - passivos)</li>
+                <li>Analise seu fluxo de caixa mensal (receitas - despesas)</li>
+            </ul>
+            <br>
+            <h3><i class=""></i> 2. Defina seus objetivos por prazo</h3>
+            <p></p>
+
+            <h4>Metas de Curto Prazo (até 2 anos) tipos:</h4>
+            <ul class="checklist">
+                <li><strong>Exemplo:</strong> Entrada de imóvel, curso de especialização, compra de automóvel</li>
+                <li><strong>Estratégia:</strong> Mistura de renda fixa e variável (70% fixa, 30% variável)</li>
+            </ul>
+            <br>
+
+            <h3><i class=""></i> 3. Use o Método SMART para Definir Metas</h3>
+            <p>Cada meta deve ser:</p>
+            
+            <ul class="checklist">
+                <li><strong>E</strong>specífica</li>
+                <li><strong>M</strong>ensurável</li>
+                <li><strong>A</strong>tingível</li>
+                <li><strong>R</strong>elevante</li>
+                <li><strong>T</strong>emporal</li>
+
+            </ul>
+            <br>
+
+            <h3><i class=""></i> 4. Priorize Suas Metas</h3>
+            <p>Classifique por:</p>
+            <ul class="checklist">
+                <li><strong>Importância</strong>  (essencial > desejável > sonho)</li>
+                <li><strong>Urgência</strong> (curto > médio > longo prazo)</li>
+            </ul>
+
+            <!-- Seção de Comparação -->
+        <section class="comparison-section">
+            <h3><i class=""></i> Template útil: </h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Meta</th>
+                        <th>Valor</th>
+                        <th>Prazo</th>
+                        <th>Prioridade</th>
+                        <th>Investimento Adequado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Reserva de Emergência</td>
+                        <td>R$15.000</td>
+                        <td>1 ano</td>
+                        <td>Alta</td>
+                        <td>Tesouro Selic</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Aposentadoria</td>
+                        <td>R$1.000,000</td>
+                        <td>25 anos</td>
+                        <td>Média</td>
+                        <td>ETFs, Ações</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+
+        <h3><i class=""></i> 5. Escolha os Investimentos Adequados</h3>
+            <p>Para cada meta, selecione:</p>
+            <ul class="checklist">
+                <li><strong>Perfil de Risco</strong>  (conservador, moderado, arrojado)</li>
+                <li><strong>Produtos Financeiros </strong> (alinhados com seu perfil)</li>
+                <li><strong>Estratégia de aportes </strong> (mensal, trimestral)</li>
+            </ul>
+            <br>
+
+            <p>Exemplo prático:</p>
+            <ul class="checklist">
+                <li>Meta: Reserva de emergência (6 meses de gastos)</li>
+                <li>Produto: Tesouro Selic (100% do valor)</li>
+                <li>Aportes: R$1.000,00 por mês até completar R$18.000,00 </li>
+            </ul>
+            <br>
+
+            <h3><i class=""></i> 6. Monitore e Ajuste Regularmente</h3>
+            <p><strong>Checklist de revisão:</strong></p>
+            <ul class="checklist">
+                <li>Acompanhe o desempenho trimestral</li>
+                <li>Rebalanceie sua carteira quando necessário</li>
+                <li>Ajuste metas conforme mudanças de vida</li>
+                <li>Celebre pequenas conquistas</li>
+            </ul>
+            <br>
+            <h2><i class=""></i> Ferramentas para te ajudar:</h2>
+            <ul class="checklist">
+                <li><strong>Planilha de Metas Financeiras </strong>(Google Sheets/Excel)</li>
+                <li><strong>Apps de gestão </strong>(GuiaBolso, Mobills)</li>
+                <li><strong>Simuladores de investimento </strong>(calculadoras do Tesouro Direto, bancos)</li>
+            </ul>
+
+
+
+            <div class="investment-tip">
+                <p><i class="fas fa-lightbulb"></i> <strong>Dica:</strong> O poder dos juros compostos favorece quem começa cedo!   Identifique seu  <a href="index.html#perfil">Perfil de Investidor</a> e comece ainda hoje, mesmo com pequenos valores. </p>
+            </div>
         
-        <script>
-            // Atualiza a data automaticamente
-            document.getElementById('current-date').textContent = new Date().toLocaleDateString('pt-BR');
-        </script>
+
+        <section class="theory-section">
+
+            <h2><i class="fas fa-coins"></i> Por que criar uma Reserva de Emergência?</h2>
+            <p>A Reserva de Emergência é um valor guardado para cobrir imprevistos financeiros sem precisar recorrer a dívidas ou comprometer seus investimentos de longo prazo. É a base da saúde financeira pessoal.</p>
+            <br>
+            <h3>1. Proteção Contra Imprevistos</h3>
+            <p>A principal função de uma reserva de emergência é servir como uma rede de segurança em situações imprevistas, como uma perda de emprego, problemas de saúde ou algum acidente. Sem essa reserva, pode-se recorrer ao crédito (cartão de crédito, empréstimos) ou até mesmo se endividar para cobrir as despesas inesperadas. A reserva de emergência ajuda a evitar que uma crise temporária se transforme em uma crise financeira grave.</p>
+
+            <br>
+
+            <h3>2. Tranquilidade e Menos Estresse</h3>
+            <p>Em um cenário de crise, a reserva oferece alívio emocional e psicológico. Ter uma reserva disponível ajuda a reduzir o estresse gerado pela incerteza econômica e proporciona maior confiança para lidar com situações adversas. A certeza de que há recursos disponíveis minimiza o medo e permite que a pessoa se concentre em resolver o problema sem ter que se preocupar com a falta de dinheiro.</p>
+
+            <br>
+
+            <h3>3. Evita Decisões Financeiras Impulsivas</h3>
+            <p>Quando não se tem uma reserva de emergência, pode-se tomar decisões financeiras impulsivas e prejudiciais, como recorrer ao crédito para cobrir despesas imediatas, comprometendo o orçamento e gerando mais dívidas. Com a reserva, a pessoa pode planejar melhor suas finanças e evitar tomar decisões precipitados.</p>
+
+            <br>
+            <h3>4. Liberdade para Aproveitar Oportunidades</h3>
+            <p>A reserva de emergência não serve apenas para cobrir imprevistos, mas também pode ser um facilitador para aproveitar oportunidades. Ao ter uma reserva sólida, a pessoa tem maior liberdade para tomar decisões financeiras mais estratégicas, como investir em uma nova oportunidade de trabalho, abrir um negócio ou até mesmo estudar.
+            </p>
+
+            <br>
+
+            <h3>5. Estabilidade e Planejamento Financeiro</h3>
+            <p>Reserva de emergência é fundamental no contexto de um planejamento financeiro bem-sucedido. Ela contribui para uma estrutura sólida de gestão de finanças, proporcionando segurança para implementar outros objetivos de longo prazo, como aposentadoria, compra de imóveis, entre outros.</p>
+        
+            <br>
+
+            <h3>💰 Como Calcular Sua Reserva de Emergência?</h3>
+            
+            <div class="destaque">
+                <strong>✅Valor recomendado:</strong> <strong>3 a 12 meses de gastos essenciais</strong>.
+                <br>
+                Exemplo: Se seus custos fixos são <strong>R$ 3.000/mês</strong>, sua reserva deve ter:
+                <ul>
+                    <li><strong>Mínimo:</strong> R$ 9.000 (3 meses)</li>
+                    <li><strong>Ideal:</strong> R$ 18.000 (6 meses)</li>
+                    <li><strong>Extra seguro:</strong> R$ 36.000 (12 meses)</li>
+                </ul>
+            </div>
+            <br>
+        
+            <p><strong>📌 Ajuste conforme sua situação:</strong></p>
+            <ul>
+                <li><strong>Autônomo/PJ:</strong> 6 a 12 meses (renda variável).</li>
+                <li><strong>CLT:</strong> 3 a 6 meses (mais estável).</li>
+            </ul>
+            <br>
+        
+            <h3>🏦 Onde Guardar a Reserva de Emergência?</h3>
+            <p>Deve ser <strong>seguro, líquido e estável</strong>:</p>
+        
+            <table class="comparison-table">
+                <thead>
+                <tr>
+                    <th>Opção</th>
+                    <th>Vantagens</th>
+                    <th>Desvantagens</th>
+                </tr>
+                <tr>
+                    <td><strong>Tesouro Selic</strong></td>
+                    <td>Seguro, liquidez diária, rende mais que a poupança</td>
+                    <td>Pode demorar 1 dia útil para resgate</td>
+                </tr>
+                <tr>
+                    <td><strong>CDB 100% do CDI (Liquidez Diária)</strong></td>
+                    <td>Rende mais que poupança, resgate rápido</td>
+                    <td>Depende do banco (risco baixo)</td>
+                </tr>
+                <tr>
+                    <td><strong>Conta Digital com Rendimento</strong> (Nubank, PicPay)</td>
+                    <td>Prático e com liquidez imediata</td>
+                    <td>Rendimento menor que Tesouro Selic</td>
+                </tr>
+                <tr>
+                    <td><strong>Poupança</strong></td>
+                    <td>Acesso imediato</td>
+                    <td>Rendimento baixo e perde para inflação</td>
+                </tr>
+            </table>
+            <br>
+        
+            <div class="alerta-perigo">
+                <div class="alerta-icon">⚠️</div>
+                <div class="alerta-conteudo">
+                    <strong>NÃO use para reserva de emergência:</strong> Ações, FIIs, criptomoedas ou investimentos arriscados.
+                </div>
+            </div>
+        
+            <br>
+            <h2>📌 Passos para Criar Sua Reserva</h2>
+            <ol>
+                <li><strong>Calcule seus gastos essenciais</strong> (aluguel, alimentação, transporte, saúde).</li>
+                <li><strong>Defina o valor-alvo</strong> (ex.: 6 meses de custos).</li>
+                <li><strong>Separe um valor mensal</strong> (ex.: 10% do salário até completar).</li>
+                <li><strong>Escolha onde guardar</strong> (Tesouro Selic ou CDB com liquidez).</li>
+                <li><strong>Só use para emergências reais!</strong></li>
+            </ol>
+            <br>
+        
+            <h2>🔎 Conclusão: Vale a Pena?</h2>
+            <div class="destaque">
+                <p><strong>✅ SIM!</strong> É a <strong>primeira etapa</strong> antes de investir.</p>
+                <p>✅ Evita dívidas, reduz estresse e dá liberdade financeira.</p>
+                <p>✅ Comece <strong>hoje</strong>, mesmo com pouco (R$ 100/mês já faz diferença).</p>
+            </div>
+            <br>
+        
+                <div class="investment-tip">
+                    <p><i class="fas fa-lightbulb"></i> <strong>Dica extra:</strong> Depois de completar sua reserva, invista o excedente em <strong>Renda Fixa ou Renda Variável</strong> conforme seu<a href="index.html#perfil">perfil.</a> </p>
+                </div>
+                
+        </section>
         
     </main>
 
     <!-- Rodapé -->
-    <<footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <h4>Learn Finance</h4>
-            <p>Sua plataforma completa de educação financeira</p>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Learn Finance</h4>
+                <p>Sua plataforma completa de educação financeira</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html#jornada">Cursos</a></li>
+                    <li><a href="index.html#perfil">Perfil de Investidor</a></li>
+                    <li><a href="tiposinvestimentos.html">Tipos de Investimentos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Fale Conosco</h4>
+                <form id="contact-form" class="contact-form">
+                    <input type="text" name="nome" placeholder="Seu nome" required>
+                    <input type="email" name="email" placeholder="Seu e-mail" required>
+                    <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+                    <button type="submit" class="cta-button">Enviar</button>
+                </form>
+            </div>
         </div>
-        <div class="footer-section">
-            <h4>Links Rápidos</h4>
-            <ul>
-                <li><a href="#jornada">Cursos</a></li>
-                <li><a href="#perfil">Perfil de Investidor</a></li>
-                <li><a href="#ferramentas">Ferramentas</a></li>
-            </ul>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Learn Finance. Todos os direitos reservados.</p>
         </div>
-        <div class="footer-section">
-            <h4>Fale Conosco</h4>
-            <form id="contact-form" class="contact-form">
-                <input type="text" name="nome" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu e-mail" required>
-                <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-                <button type="submit" class="cta-button">Enviar</button>
-            </form>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 Learn Finance. Todos os direitos reservados.</p>
-    </div>
-</footer>
-<!-- Modais -->
-<div id="login-modal" class="modal hidden">
-    <!-- Conteúdo do modal de login -->
-</div>
+    </footer>
 
-<script src="js/script.js"></script>
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    
+    <!-- Script específico para esta página -->
+    <script>
+        // Ativar item do menu atual
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Efeito de hover nos cards
+            const investmentCards = document.querySelectorAll('.investment-card');
+            investmentCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    const icon = card.querySelector('h4 i');
+                    if (icon) {
+                        icon.style.transform = 'scale(1.1)';
+                        icon.style.transition = 'transform 0.3s ease';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    const icon = card.querySelector('h4 i');
+                    if (icon) {
+                        icon.style.transform = 'scale(1)';
+                    }
+                });
+            });
+            
+            // Validação do formulário de contato
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                    this.reset();
+                });
+            }
+        });
+    </script>
 </body>
 </html>
