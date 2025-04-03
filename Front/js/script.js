@@ -271,8 +271,11 @@ function setupTools() {
 }
 
     document.getElementById('investment-simulator').addEventListener('click', () => {
-        alert('Simulador de Investimentos será aberto');
-        // Implementar lógica da ferramenta
+        alert('Simulador de Investimentos será aberto em outra página');
+        console.log('Redirecionando para Simulador de Investimentos em Renda Fixa...');
+        window.open('https://www.idinheiro.com.br/calculadoras/calculadora-de-investimentos', '_blank');
+        // window.open('https://infograficos.valor.globo.com/calculadoras/calculadora-de-renda-fixa.html#ancor', '_blank');
+        
     });
     
     document.getElementById('portfolio-builder').addEventListener('click', () => {
@@ -280,11 +283,11 @@ function setupTools() {
         // Implementar lógica da ferramenta
     });
 
-// ===== FUNÇÕES DO ORÇAMENTO =====
-function setupBudgetTool() {
-    // Adicione aqui todo o código JavaScript 
-    // que estava na tag <script> do orçamento.html
-}
+// // ===== FUNÇÕES DO ORÇAMENTO =====
+// function setupBudgetTool() {
+//     // Adicione aqui todo o código JavaScript 
+//     // que estava na tag <script> do orçamento.html
+// }
 
 document.addEventListener('DOMContentLoaded', function() {
     setupBudgetTool();
