@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Investimentos | Learn Finance</title>
+    <meta name="description" content="Conheça todos os tipos de investimentos: renda fixa, renda variável, fundos e outras alternativas para montar sua carteira ideal">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos específicos para esta página */
+        .investment-hero {
+            background: #2c3e50; /* Cor fixa igual ao logo */
+            color: white;
+            padding: 4rem 1rem 3rem; /* Ajuste no padding para ficar colado na navbar */
+            text-align: center;
+            margin: 0; /* Removido margin para ficar colado */
+            border-radius: 0; /* Sem bordas arredondadas */
+            position: relative;
+            z-index: 1;
+        }
+        
+        .content-container {
+            margin-top: 0; /* Remove margem superior para ficar colado */
+            border-radius: 0; /* Remove bordas arredondadas do container */
+        }
+        
+        .investment-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .investment-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .investment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: #3498db;
+        }
+        
+        .investment-card h4 i {
+            margin-right: 0.5rem;
+            color: #3498db;
+        }
+        
+        .investment-tip {
+            background-color: #f8f9fa;
+            border-left: 4px solid #f39c12;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .investment-tip i {
+            color: #f39c12;
+            margin-right: 0.5rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-table th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        /* Estilos para o conteúdo */
+        .theory-section {
+            padding: 2rem;
+        }
+        
+        .theory-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .theory-section h3 {
+            color: #2c3e50;
+            margin: 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .theory-section p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        
+        .checklist {
+            list-style-type: none;
+            margin: 1.5rem 0;
+        }
+        
+        .checklist li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .checklist li:before {
+            content: "✓";
+            color: #27ae60;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><i class="fas fa-chart-line"></i> Learn Finance</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#jornada">Jornada</a></li>
+            <li><a href="index.html#perfil">Meu Perfil</a></li>
+            <li><a href="tiposinvestimentos.html">Tipos de Investimentos</a></li>
+            <li><a href="index.html#ferramentas">Ferramentas</a></li>
+            <li><a href="index.html#sobre">Sobre</a></li>
+            <li class="auth-buttons">
+                <button id="btn-login">Login</button>
+                <button id="btn-register">Cadastre-se</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="content-container">
+        <!-- Seção Hero -->
+        <section class="investment-hero">
+            <h1><i class="fas fa-piggy-bank"></i> Tipos de Investimentos</h1>
+            <p>Conheça as principais categorias e escolha as melhores opções para seu perfil</p>
+        </section>
+
+        <!-- Conteúdo dos Tipos de Investimentos -->
+        <section class="theory-section">
+            <h2><i class="fas fa-coins"></i> Explorando as Opções de Investimento</h2>
+            <p>Entender os diferentes tipos de investimentos é fundamental para construir uma carteira diversificada e alinhada com seus objetivos financeiros. Veja abaixo as principais categorias:</p>
+            
+            <h3><i class="fas fa-lock"></i> 1. Renda Fixa</h3>
+            <p>Investimentos de renda fixa são aqueles em que o retorno pode ser calculado no momento da aplicação, oferecendo mais previsibilidade. Segundo Gitman e Joehnk (2005), são ideais para investidores conservadores.</p>
+            
+            <h4>Principais tipos:</h4>
+            <ul class="checklist">
+                <li><strong>Tesouro Direto</strong> - Títulos públicos federais (ex: Tesouro Selic, IPCA+)</li>
+                <li><strong>CDB</strong> - Certificado de Depósito Bancário (protegido pelo FGC até R$ 250 mil)</li>
+                <li><strong>LCI/LCA</strong> - Letras de Crédito Imobiliário/Agroindustrial (isentas de IR)</li>
+                <li><strong>Debêntures</strong> - Títulos de dívida de empresas privadas</li>
+            </ul>
+            
+            <h3><i class="fas fa-chart-line"></i> 2. Renda Variável</h3>
+            <p>Investimentos com retornos não garantidos, cuja rentabilidade varia conforme o mercado. Como destacado por Bodie, Kane e Marcus (2018), oferecem maior potencial de ganho, mas com mais risco.</p>
+            
+            <h4>Principais tipos:</h4>
+            <ul class="checklist">
+                <li><strong>Ações</strong> - Frações do capital social de empresas listadas na bolsa</li>
+                <li><strong>Fundos Imobiliários (FIIs)</strong> - Investimento coletivo em empreendimentos imobiliários</li>
+                <li><strong>ETFs</strong> - Fundos de índice que replicam carteiras teóricas</li>
+                <li><strong>Criptomoedas</strong> - Ativos digitais descentralizados (ex: Bitcoin, Ethereum)</li>
+            </ul>
+            
+            <h3><i class="fas fa-users"></i> 3. Fundos de Investimento</h3>
+            <p>Segundo Markowitz (1952), fundos permitem diversificação profissional com valores menores. Podem ser:</p>
+            
+            <ul class="checklist">
+                <li><strong>Fundos Multimercado</strong> - Investem em diferentes classes de ativos</li>
+                <li><strong>Fundos de Ações</strong> - Carteiras compostas majoritariamente por ações</li>
+                <li><strong>Fundos de Renda Fixa</strong> - Foco em títulos de dívida</li>
+                <li><strong>Fundos Cambiais</strong> - Expostos a moedas estrangeiras</li>
+            </ul>
+            
+            <h3><i class="fas fa-shapes"></i> 4. Outros Investimentos</h3>
+            <p>Alternativas complementares mencionadas por Graham (1949) em "O Investidor Inteligente":</p>
+            
+            <ul class="checklist">
+                <li><strong>Imóveis</strong> - Compra para aluguel ou valorização</li>
+                <li><strong>Commodities</strong> - Ouro, prata, petróleo e produtos agrícolas</li>
+                <li><strong>Private Equity</strong> - Participação em empresas não listadas</li>
+                <li><strong>Startups</strong> - Investimento em empresas emergentes</li>
+            </ul>
+
+            <div class="investment-tip">
+                <p><i class="fas fa-lightbulb"></i> <strong>Dica:</strong> A alocação ideal depende do seu <a href="index.html#perfil">perfil de investidor</a> e objetivos financeiros. Diversifique!</p>
+            </div>
+        </section>
+        
+        <!-- Seção de Comparação -->
+        <section class="comparison-section">
+            <h3><i class="fas fa-balance-scale"></i> Comparativo entre Tipos de Investimentos</h3>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Risco</th>
+                        <th>Potencial de Retorno</th>
+                        <th>Liquidez</th>
+                        <th>Horizonte Temporal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Renda Fixa</td>
+                        <td>Baixo a Moderado</td>
+                        <td>Baixo a Moderado</td>
+                        <td>Alta (varia por produto)</td>
+                        <td>Curto a Médio Prazo</td>
+                    </tr>
+                    <tr>
+                        <td>Renda Variável</td>
+                        <td>Moderado a Alto</td>
+                        <td>Alto</td>
+                        <td>Alta (mercado secundário)</td>
+                        <td>Longo Prazo</td>
+                    </tr>
+                    <tr>
+                        <td>Fundos de Investimento</td>
+                        <td>Variável</td>
+                        <td>Variável</td>
+                        <td>Depende do fundo</td>
+                        <td>Variável</td>
+                    </tr>
+                    <tr>
+                        <td>Outros (Imóveis, Startups)</td>
+                        <td>Alto</td>
+                        <td>Muito Alto</td>
+                        <td>Baixa</td>
+                        <td>Longuíssimo Prazo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- Seção de Referências -->
+        <section id="referencias" class="references">
+            <h3><i class="fas fa-book"></i> Referências Bibliográficas</h3>
+            <div class="reference-item">
+                <p>BODIE, Z.; KANE, A.; MARCUS, A. J. <em>Investments</em>. 11. ed. Nova York: McGraw-Hill, 2018.</p>
+            </div>
+            <div class="reference-item">
+                <p>GITMAN, L. J.; JOEHNK, M. D. <em>Fundamentals of Investing</em>. 10. ed. Boston: Pearson, 2005.</p>
+            </div>
+            <div class="reference-item">
+                <p>GRAHAM, B. <em>The Intelligent Investor</em>. Nova York: HarperBusiness, 1949.</p>
+            </div>
+            <div class="reference-item">
+                <p>MARKOWITZ, H. Portfolio Selection. <em>The Journal of Finance</em>, v. 7, n. 1, p. 77-91, 1952.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Learn Finance</h4>
+                <p>Sua plataforma completa de educação financeira</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html#jornada">Cursos</a></li>
+                    <li><a href="index.html#perfil">Perfil de Investidor</a></li>
+                    <li><a href="tiposinvestimentos.html">Tipos de Investimentos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Fale Conosco</h4>
+                <form id="contact-form" class="contact-form">
+                    <input type="text" name="nome" placeholder="Seu nome" required>
+                    <input type="email" name="email" placeholder="Seu e-mail" required>
+                    <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+                    <button type="submit" class="cta-button">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Learn Finance. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    
+    <!-- Script específico para esta página -->
+    <script>
+        // Ativar item do menu atual
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Efeito de hover nos cards
+            const investmentCards = document.querySelectorAll('.investment-card');
+            investmentCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    const icon = card.querySelector('h4 i');
+                    if (icon) {
+                        icon.style.transform = 'scale(1.1)';
+                        icon.style.transition = 'transform 0.3s ease';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    const icon = card.querySelector('h4 i');
+                    if (icon) {
+                        icon.style.transform = 'scale(1)';
+                    }
+                });
+            });
+            
+            // Validação do formulário de contato
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
