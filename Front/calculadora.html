@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Finance - Calculadora</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos Gerais */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            min-height: 100vh;
+        }
+
+        /* Barra de Navegação */
+        .navbar {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+        }
+
+        .logo h1 i {
+            color: #3498db;
+            margin-right: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #34495e;
+            font-weight: 500;
+        }
+
+        .auth-buttons button {
+            margin-left: 1rem;
+            padding: 8px 20px;
+            border-radius: 5px;
+            border: 1px solid #3498db;
+            background: white;
+            color: #3498db;
+            cursor: pointer;
+        }
+
+        /* Container Principal */
+        .content-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        /* Calculadora */
+        .finance-calculator {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Formulário */
+        .calculator-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .calculator-title {
+            text-align: center;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #34495e;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        .calculate-btn {
+            grid-column: 1 / -1;
+            padding: 1rem;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        /* Resultados */
+        .results-container {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 2rem;
+            border-left: 4px solid #27ae60;
+        }
+
+        .results-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .results-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .result-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .result-label {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-value {
+            color: #27ae60;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .finance-calculator {
+                grid-template-columns: 1fr;
+            }
+
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><i class="fas fa-chart-line"></i> Learn Finance</h1>
+        </div>
+        <ul class="nav-links">
+ 	    <li><a href="#topo">Sobre</a></li>
+            <li><a href="#jornada">Jornada</a></li>
+            <li><a href="#perfil">Meu Perfil</a></li>
+            <li><a href="#ferramentas">Ferramentas</a></li>
+            <li class="auth-buttons">
+                <button id="btn-login">Login</button>
+                <button id="btn-register">Cadastre-se</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Calculadora -->
+    <main class="content-container">
+        <div class="finance-calculator">
+            <!-- Seção do Formulário -->
+            <div class="calculator-section">
+                <h2 class="calculator-title"><i class="fas fa-calculator"></i> Calculadora de Investimentos</h2>
+                
+                <div class="calculator-grid">
+                    <div class="form-group">
+                        <label for="initial-amount">Valor Inicial (R$)</label>
+                        <input type="number" id="initial-amount" min="0" step="100" value="1000">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="monthly-amount">Aporte Mensal (R$)</label>
+                        <input type="number" id="monthly-amount" min="0" step="100" value="100">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Tipo de Investimento</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="pre-fixado" name="investment-type" value="pre" checked>
+                                <label for="pre-fixado">Pré-fixado</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="pos-fixado" name="investment-type" value="pos">
+                                <label for="pos-fixado">Pós-fixado</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" id="rate-container">
+                        <label for="interest-rate">Taxa (% ao ano)</label>
+                        <input type="number" id="interest-rate" min="0" step="0.1" value="8.5">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time-period">Período</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="number" id="time-period" min="1" value="5" style="flex: 1;">
+                            <select id="time-period-unit" style="width: 100px;">
+                                <option value="years">Anos</option>
+                                <option value="months">Meses</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tax-period">Tributação</label>
+                        <select id="tax-period">
+                            <option value="0">Isento</option>
+                            <option value="15">15% (Longo Prazo)</option>
+                            <option value="17.5">17.5% (Médio Prazo)</option>
+                            <option value="20">20% (Curto Prazo)</option>
+                            <option value="22.5" selected>22.5% (Pré-fixado)</option>
+                        </select>
+                    </div>
+                    
+                    <button id="calculate-btn" class="calculate-btn">
+                        <i class="fas fa-calculator"></i> Calcular
+                    </button>
+                </div>
+            </div>
+
+            <!-- Resultados -->
+            <div class="results-container" id="results-container">
+                <h3 class="results-title"><i class="fas fa-chart-bar"></i> Resultado da Simulação</h3>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-label">Total Investido</div>
+                        <div id="total-invested" class="result-value">R$ 6.000,00</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Juros Acumulados</div>
+                        <div id="total-interest" class="result-value">R$ 1.450,50</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Imposto Deduzido</div>
+                        <div id="tax-amount" class="result-value">R$ 326,36</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Valor Líquido Final</div>
+                        <div id="final-amount" class="result-value">R$ 7.124,14</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer style="background: white; padding: 2rem; margin-top: 2rem; text-align: center;">
+        <p>&copy; 2025 Learn Finance. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const calculateBtn = document.getElementById('calculate-btn');
+            const investmentTypeRadios = document.querySelectorAll('input[name="investment-type"]');
+
+            // Atualizar campos quando o tipo muda
+            investmentTypeRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    const rateContainer = document.getElementById('rate-container');
+                    if (this.value === 'pos') {
+                        rateContainer.innerHTML = `
+                            <label for="interest-rate">% do CDI</label>
+                            <input type="number" id="interest-rate" min="0" max="200" step="0.1" value="100">
+                        `;
+                    } else {
+                        rateContainer.innerHTML = `
+                            <label for="interest-rate">Taxa (% ao ano)</label>
+                            <input type="number" id="interest-rate" min="0" step="0.1" value="8.5">
+                        `;
+                    }
+                    calculateInvestment();
+                });
+            });
+
+            // Calcular em tempo real
+            document.querySelectorAll('#initial-amount, #monthly-amount, #interest-rate, #time-period, #time-period-unit, #tax-period').forEach(el => {
+                el.addEventListener('input', calculateInvestment);
+            });
+
+            function calculateInvestment() {
+                // Valores dos inputs
+                const initialAmount = parseFloat(document.getElementById('initial-amount').value) || 0;
+                const monthlyAmount = parseFloat(document.getElementById('monthly-amount').value) || 0;
+                let timePeriod = parseInt(document.getElementById('time-period').value) || 1;
+                const timePeriodUnit = document.getElementById('time-period-unit').value;
+                let interestRate = parseFloat(document.getElementById('interest-rate').value) || 0;
+                const investmentType = document.querySelector('input[name="investment-type"]:checked').value;
+                const incomeTax = parseFloat(document.getElementById('tax-period').value) || 0;
+
+                // Converter para meses
+                if (timePeriodUnit === 'years') timePeriod *= 12;
+
+                // Ajuste pós-fixado
+                if (investmentType === 'pos') {
+                    const currentCDI = 14.15;
+                    interestRate = interestRate * currentCDI / 100;
+                }
+
+                // Cálculo de juros
+                const monthlyRate = Math.pow(1 + interestRate / 100, 1 / 12) - 1;
+                let futureValue = initialAmount * Math.pow(1 + monthlyRate, timePeriod);
+
+                for (let i = 1; i <= timePeriod; i++) {
+                    futureValue += monthlyAmount * Math.pow(1 + monthlyRate, timePeriod - i);
+                }
+
+                // Resultados finais
+                const totalInvested = initialAmount + (monthlyAmount * timePeriod);
+                const totalInterest = futureValue - totalInvested;
+                const taxAmount = totalInterest * (incomeTax / 100);
+                const finalAmount = futureValue - taxAmount;
+
+                // Atualizar valores
+                document.getElementById('total-invested').textContent = formatCurrency(totalInvested);
+                document.getElementById('total-interest').textContent = formatCurrency(totalInterest);
+                document.getElementById('tax-amount').textContent = formatCurrency(taxAmount);
+                document.getElementById('final-amount').textContent = formatCurrency(finalAmount);
+            }
+
+            function formatCurrency(value) {
+                return 'R$ ' + value.toFixed(2)
+                    .replace('.', ',')
+                    .replace(/(\d)(?=(\d{3})+,)/g, '$1.');
+            }
+
+            // Calcular inicial
+            calculateInvestment();
+        });
+    </script>
+</body>
+</html>

@@ -86,6 +86,14 @@ let userProfile = null;
 
 // Inicialização
 document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('a[href="#topo"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
     // Iniciar questionário quando clicar no botão Comece agora
     document.getElementById('btn-start').addEventListener('click', startQuiz);
     
@@ -271,9 +279,8 @@ function setupTools() {
 }
 
     document.getElementById('investment-simulator').addEventListener('click', () => {
-        alert('Simulador de Investimentos será aberto em outra página');
-        console.log('Redirecionando para Simulador de Investimentos em Renda Fixa...');
-        window.open('https://www.idinheiro.com.br/calculadoras/calculadora-de-investimentos', '_blank');
+               console.log('Redirecionando para Simulador de Investimentos em Renda Fixa...');
+        window.open('calculadora.html', '_blank');
         // window.open('https://infograficos.valor.globo.com/calculadoras/calculadora-de-renda-fixa.html#ancor', '_blank');
         
     });
