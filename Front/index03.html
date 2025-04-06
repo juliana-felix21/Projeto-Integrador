@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Finance - Sua plataforma de educação financeira</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+ <a id="topo" style="position: absolute; top: 0; left: 0;"></a>
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><i class="fas fa-chart-line"></i> Learn Finance</h1>
+        </div>
+        <ul class="nav-links">
+ 	    <li><a href="#topo">Sobre</a></li>
+            <li><a href="#jornada">Jornada</a></li>
+            <li><a href="#perfil">Meu Perfil</a></li>
+            <li><a href="#ferramentas">Ferramentas</a></li>
+            <li class="auth-buttons">
+                <button id="btn-login">Login</button>
+                <button id="btn-register">Cadastre-se</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h2>Domine sua vida financeira</h2>
+            <p>Conhecimento liberta e traz mais segurança na hora de investir. É isso que a <strong>LearnFinance</strong> veio trazer para você: Liberdade  e segurança.</p>
+<p>Navegue pelos passos da jornada para dominar sua vida financeira e não deixe de preencher o questionário sobre seu perfil de risco para conhecer melhor qual investimento se adequa as suas necessidades. 
+<p/>
+            <button id="btn-start" class="cta-button">Comece agora</button>
+        </div>
+        <div class="hero-image">
+            <img src="images/invest04.png" alt="Ilustração de educação financeira">
+        </div>
+    </header>
+
+    <!-- Seção de Educação Financeira -->
+    <section id="jornada" class="jornada-section">
+        <h2><i class="fas fa-graduation-cap"></i> Jornada de Sucesso</h2>
+        <div class="learning-path">
+            <div class="path-step" data-level="iniciante">
+                <h3>Organize-se</h3>
+                <ul>
+                    <li><a href="orcamento.html" target="_blank">Orçamento Pessoal
+                    </a>
+                    <li><a href="gerenciedividas.html" target="_blank">Gerencie suas dívidas
+                    </a>
+                    <li><a href="criemetas.html" target="_blank">Crie suas metas
+                    </a>
+                </ul>
+            </div>
+            <div class="path-step" data-level="intermediario">
+                <h3>Invista</h3>
+                <ul>
+		    <li><a href="conceitosfundamentais.html" target="_blank">Conceitos Fundamentais
+                    </a>
+                    <li><a href="tiposinvestimentos.html" target="_blank">Tipos de investimentos
+                    </a>
+                    <li><a href="risco.html" target="_blank">Risco, retorno e diversificação
+                    </a>
+                  </ul>
+            </div>
+            <div class="path-step" data-level="avancado">
+                <h3>Aprimore-se</h3>
+                <ul>
+                    <li><a href="cursos.html" target="_blank">Cursos
+                    </a>
+                    <li><a href="leituras.html" target="_blank">Leituras
+                    </a>
+                    <li><a href="noticias.html" target="_blank">Notícias
+                    </a>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Questionário de Perfil de Investidor -->
+    <section id="perfil" class="quiz-section">
+        <div class="quiz-container">
+            <h2><i class="fas fa-user-tie"></i> Descubra seu perfil de investidor</h2>
+            <div class="progress-bar">
+                <div class="progress" id="quiz-progress"></div>
+            </div>
+            <form id="investor-profile-quiz">
+                <!-- Perguntas serão inseridas via JavaScript -->
+            </form>
+            <div id="quiz-result" class="hidden">
+                <h3>Seu perfil é: <span id="profile-type"></span></h3>
+                <div id="profile-description"></div>
+                <div class="recommendations">
+                    <h4>Recomendações para você:</h4>
+                    <div id="investment-recommendations"></div>
+                </div>
+                <button id="save-profile" class="cta-button">Salvar meu perfil</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ferramentas Interativas -->
+    <section id="ferramentas" class="tools-section">
+        <h2><i class="fas fa-tools"></i> Ferramentas Financeiras</h2>
+        <div class="tools-grid">
+            <div class="tool-card" id="compound-interest">
+                <i class="fas fa-calculator"></i>
+                <h3>Calculadora do Cidadão</h3>
+            </div>
+            <div class="tool-card" id="investment-simulator">
+                <i class="fas fa-chart-pie"></i>
+                <h3>Simulador de Investimentos em Renda Fixa</h3>
+            </div>
+            <div class="tool-card" id="portfolio-builder">
+                <i class="fas fa-briefcase"></i>
+                <h3>Construtor de Carteira</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Learn Finance</h4>
+            <p>Sua plataforma de educação financeira</p>
+        </div>
+        <div class="footer-section">
+            <h4>Links Rápidos</h4>
+            <ul>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="#perfil">Perfil de Investidor</a></li>
+                <li><a href="#ferramentas">Ferramentas</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Fale Conosco</h4>
+            <form id="contact-form" class="contact-form">
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+                <button type="submit" class="cta-button">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Learn Finance. Todos os direitos reservados.</p>
+    </div>
+</footer>
+<!-- Modais -->
+<div id="login-modal" class="modal hidden">
+    <!-- Conteúdo do modal de login -->
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
